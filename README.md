@@ -34,6 +34,7 @@ A custom discord bot providing functionality for interacting with FiveM & Discor
 Variables | Description | Required?
 ------------ | ------------- | -------------
 URL_SERVER | Base URL for the FiveM server e.g. http://127.0.0.1:3501 **(don't end with /)** | Yes
+SERVER_NAME | The name of your FiveM server | Yes
 LOG_LEVEL | Number __0-4__ specifying level of logs *4 = No Logs* | Yes
 BOT_TOKEN | Discord bot token | Yes
 CHANNEL_ID | Channel ID that will be used for updates to be pushed to | Yes
