@@ -56,7 +56,8 @@ LOG_CHANNEL | Channel that will log status changes | Yes
 ![Screenshot](https://media.discordapp.net/attachments/424886239410388992/625739298846801936/unknown.png)
 
 ## Credits
-- Skylar - https://github.com/TheONLYGod1
+- Skylar
+    - https://github.com/TheONLYGod1
     - [![Discord Bots](https://top.gg/api/widget/status/515645834684006400.svg)](https://top.gg/bot/515645834684006400)
     - https://godsnetwork.live
 - Roque - https://github.com/RoqueDEV
