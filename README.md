@@ -13,7 +13,7 @@ A custom discord bot providing functionality for interacting with FiveM & Discor
 1. Open https://discord.com/developers/applications and sign in
 2. Click the button that says `'New Application'` in the top right hand corner of the page
 3. Enter a name for your bot
-4. In the menu on the left side of the page click `'Bot'` then click `'Add Bot`'
+4. In the menu on the left side of the page click `'Bot'` then click `'Add Bot'`
     - If you don't want random users to invite your bot, uncheck the feature that says `'Public Bot'` on the bot page
 5. Your new bot's token will display under the name field and you can click `'Copy'` to copy the token to your clipboard
 
