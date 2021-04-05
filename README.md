@@ -1,7 +1,7 @@
 # FiveM Server Status
 
 A custom discord bot providing functionality for interacting with FiveM & Discord servers.
-- Updated to DJSv12 by [Skylar](https://github.com/TheONLYGod1)
+- Updated to DJSv12 & Edited by [Skylar](https://github.com/TheONLYGod1)
 ## Need Help?
 [![](https://discordapp.com/api/guilds/617870704662020136/widget.png?style=banner2)](https://discord.gg/pAKE2YK)
 ## Requirements:
