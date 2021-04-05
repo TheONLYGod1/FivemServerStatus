@@ -52,7 +52,7 @@ LOG_CHANNEL | Channel that will log status changes | Yes
     "SERVER_LOGO": "https://cdn.discordapp.com/icons/820669620339998770/cdbc882432a90b72ee921f57643526fa.webp?size=128",
     "LOG_LEVEL": "2",
     "PERMISSION": "",
-    "BOT_TOKEN": "NDQ2MzcyMjYxNDExNDIyMjA4.WvxykA.bc-ndfmFgBG-Oq4bvr7zNSzao_0",
+    "BOT_TOKEN": "[BOT TOKEN]",
     "CHANNEL_ID": "617873518960574464",
     "MESSAGE_ID": "828635715121840178",
     "SUGGESTION_CHANNEL": "617873319609368669",
