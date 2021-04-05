@@ -44,6 +44,58 @@ SUGGESTION_CHANNEL | Channel that will create suggestion embeds in | Yes
 BUG_CHANNEL | Channel that will recieve bug reports | Yes
 BUG_LOG_CHANNEL | Channel that will log bug reports | Yes
 LOG_CHANNEL | Channel that will log status changes | Yes
+##### Example of the config.json file
+```json    
+{
+    "URL_SERVER": "http://127.0.0.1:30120",
+    "SERVER_NAME": "BaySide RP",
+    "SERVER_LOGO": "https://cdn.discordapp.com/icons/820669620339998770/cdbc882432a90b72ee921f57643526fa.webp?size=128",
+    "LOG_LEVEL": "2",
+    "PERMISSION": "",
+    "BOT_TOKEN": "NDQ2MzcyMjYxNDExNDIyMjA4.WvxykA.bc-ndfmFgBG-Oq4bvr7zNSzao_0",
+    "CHANNEL_ID": "617873518960574464",
+    "MESSAGE_ID": "828635715121840178",
+    "SUGGESTION_CHANNEL": "617873319609368669",
+    "BUG_CHANNEL": "617873444238786617",
+    "BUG_LOG_CHANNEL": "657070256925442058",
+    "LOG_CHANNEL": "617873550648279051"
+  } 
+```
+
+## List of permissions for the `PERMISSION` variables
+Permission | Description
+------------ | -------------
+ADMINISTRATOR | Implicitly has all permissions, and bypasses all channel overwrites
+CREATE_INSTANT_INVITE | Create invitations to the guild
+KICK_MEMBERS | N/A
+BAN_MEMBERS | N/A
+MANAGE_CHANNELS | Edit and reorder channels)
+MANAGE_GUILD | Edit the guild information, region, etc.
+ADD_REACTIONS | Add new reactions to messages
+VIEW_AUDIT_LOG | N/A
+PRIORITY_SPEAKER | N/A
+STREAM | N/A
+VIEW_CHANNEL | N/A
+SEND_MESSAGES | N/A
+SEND_TTS_MESSAGES | N/A
+MANAGE_MESSAGES | Delete messages and reactions
+EMBED_LINKS | Links posted will have a preview embedded
+ATTACH_FILES | N/A
+READ_MESSAGE_HISTORY | View messages that were posted prior to opening Discord
+MENTION_EVERYONE | N/A
+USE_EXTERNAL_EMOJIS | Use emojis from different guilds
+VIEW_GUILD_INSIGHTS | N/A
+CONNECT | Connect to a voice channel
+SPEAK | Speak in a voice channel
+MUTE_MEMBERS | Mute members across all voice channels
+DEAFEN_MEMBERS | Deafen members across all voice channels
+MOVE_MEMBERS | Move members between voice channels
+USE_VAD | Use voice activity detection
+CHANGE_NICKNAME | N/A
+MANAGE_NICKNAMES | Change other members' nicknames
+MANAGE_ROLES | N/A
+MANAGE_WEBHOOKS | N/A
+MANAGE_EMOJIS | N/A
 
 ## Running
 1. `npm i`
