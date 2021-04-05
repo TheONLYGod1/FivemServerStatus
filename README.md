@@ -63,7 +63,7 @@ LOG_CHANNEL | Channel that will log status changes | Yes
   } 
 ```
 
-## List of permissions for the `PERMISSION` variables
+## List of permissions for the `PERMISSION` variable
 Permission | Description
 ------------ | -------------
 ADMINISTRATOR | Implicitly has all permissions, and bypasses all channel overwrites
