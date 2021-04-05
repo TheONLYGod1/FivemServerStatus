@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "description": "FiveM Server Status",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./index.js",
+    "update": "git pull && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Douile / Roque / Skylar",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "fetch-timeout": "0.0.2",
+    "fs": "0.0.1-security",
+    "libsodium-wrappers": "^0.7.4",
+    "node-fetch": "^1.6.3",
+    "opusscript": "0.0.6",
+    "readline": "^1.3.0",
+    "uws": "^100.0.1",
+    "ytdl-core": "^0.29.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheONLYGod1/FivemServerStatus"
+  }
+}
