@@ -37,7 +37,7 @@ URL_SERVER | Base URL for the FiveM server e.g. http://127.0.0.1:3501 **(don't e
 LOG_LEVEL | Number __0-4__ specifying level of logs *4 = No Logs* | Yes
 BOT_TOKEN | Discord bot token | Yes
 CHANNEL_ID | Channel ID that will be used for updates to be pushed to | Yes
-MESSAGE_ID | Message ID of previous update to edit (not required) | No 
+MESSAGE_ID | Message ID of previous update to edit | No 
 SUGGESTION_CHANNEL | Channel that will create suggestion embeds in | Yes
 BUG_CHANNEL | Channel that will recieve bug reports | Yes
 BUG_LOG_CHANNEL | Channel that will log bug reports | Yes
