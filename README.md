@@ -55,7 +55,7 @@ LOG_CHANNEL | Channel that will log status changes | Yes
 2. `+status clear` - Clears the warning message
 3. `+help` - Displays the bots commands
   
-![Screenshot](https://media.discordapp.net/attachments/424886239410388992/625739298846801936/unknown.png)
+![Screenshot](https://godsnetwork.live/apis/fivem/img/ythv9.png)
 
 ## Credits
 - Skylar
