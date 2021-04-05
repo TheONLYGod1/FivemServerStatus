@@ -36,6 +36,7 @@ Variables | Description | Required?
 URL_SERVER | Base URL for the FiveM server e.g. http://127.0.0.1:3501 **(don't end with /)** | Yes
 SERVER_NAME | The name of your FiveM server | Yes
 SERVER_LOGO | A logo for your FiveM server | No
+PERMISSION | Permission needed to set the server status `+status` | Yes
 LOG_LEVEL | Number __0-4__ specifying level of logs *4 = No Logs* | Yes
 BOT_TOKEN | Discord bot token | Yes
 CHANNEL_ID | Channel ID that will be used for updates to be pushed to | Yes
@@ -51,8 +52,8 @@ LOG_CHANNEL | Channel that will log status changes | Yes
     "SERVER_NAME": "BaySide RP",
     "SERVER_LOGO": "https://cdn.discordapp.com/icons/820669620339998770/cdbc882432a90b72ee921f57643526fa.webp?size=128",
     "LOG_LEVEL": "2",
-    "PERMISSION": "",
-    "BOT_TOKEN": "[BOT TOKEN]",
+    "PERMISSION": "MANAGE_MESSAGES",
+    "BOT_TOKEN": "[BOT TOKEN HERE]",
     "CHANNEL_ID": "617873518960574464",
     "MESSAGE_ID": "828635715121840178",
     "SUGGESTION_CHANNEL": "617873319609368669",
@@ -98,7 +99,7 @@ MANAGE_WEBHOOKS | N/A
 MANAGE_EMOJIS | N/A
 
 ## Running
-1. `npm i`
+1. `npm i` or `npm install`
 2. `npm start` or `node ./index.js`
 
 
