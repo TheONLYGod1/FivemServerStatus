@@ -70,7 +70,7 @@ ADMINISTRATOR | Implicitly has all permissions, and bypasses all channel overwri
 CREATE_INSTANT_INVITE | Create invitations to the guild
 KICK_MEMBERS | N/A
 BAN_MEMBERS | N/A
-MANAGE_CHANNELS | Edit and reorder channels)
+MANAGE_CHANNELS | Edit and reorder channels
 MANAGE_GUILD | Edit the guild information, region, etc.
 ADD_REACTIONS | Add new reactions to messages
 VIEW_AUDIT_LOG | N/A
