@@ -1,12 +1,12 @@
 # FiveM Server Status
 [![](https://img.shields.io/github/forks/TheONLYGod1/FivemServerStatus?label=Fork&style=social)](https://github.com/TheONLYGod1/FivemServerStatus/fork)
-![](https://img.shields.io/badge/discord.js-v12.5.3-brightgreen)
-![](https://img.shields.io/node/v/bot)
-![](https://img.shields.io/maintenance/yes/2021)
-![](https://img.shields.io/github/issues/TheONLYGod1/FivemServerStatus)
-![](https://img.shields.io/github/license/TheONLYGod1/FivemServerStatus)
-![](https://img.shields.io/github/languages/count/TheONLYGod1/FivemServerStatus)
-![](https://img.shields.io/github/languages/top/TheONLYGod1/FivemServerStatus)
+[![](https://img.shields.io/badge/discord.js-v12.5.3-brightgreen)]()
+[![](https://img.shields.io/node/v/bot)]()
+[![](https://img.shields.io/maintenance/yes/2021)]()
+[![](https://img.shields.io/github/issues/TheONLYGod1/FivemServerStatus)]()
+[![](https://img.shields.io/github/license/TheONLYGod1/FivemServerStatus)]()
+[![](https://img.shields.io/github/languages/count/TheONLYGod1/FivemServerStatus)]()
+[![](https://img.shields.io/github/languages/top/TheONLYGod1/FivemServerStatus)]()
 
 
 A custom discord bot providing functionality for interacting with FiveM & Discord servers.
