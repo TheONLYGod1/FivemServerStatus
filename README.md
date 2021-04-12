@@ -1,5 +1,5 @@
 # FiveM Server Status
-![](https://img.shields.io/github/forks/TheONLYGod1/FivemServerStatus?label=Fork&style=social) 
+[![](https://img.shields.io/github/forks/TheONLYGod1/FivemServerStatus?label=Fork&style=social)](https://github.com/TheONLYGod1/FivemServerStatus/fork)
 ![](https://img.shields.io/badge/discord.js-v12.5.3-brightgreen)
 ![](https://img.shields.io/node/v/bot)
 ![](https://img.shields.io/maintenance/yes/2021)
