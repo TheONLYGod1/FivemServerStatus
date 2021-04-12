@@ -5,8 +5,6 @@ const Discord = require('discord.js');
 const fetchTimeout = require('fetch-timeout');
 const { paddedFullWidth, errorWrap } = require('./utils.js');
 
-
-
 const LOG_LEVELS = {
   'ERROR': 3,
   'INFO': 2,
@@ -14,6 +12,7 @@ const LOG_LEVELS = {
   'SPAM': 0
 }
 
+// --- don't mess with this unless you know what you are doing... ---
 const BOT_CONFIG = {
   'apiRequestMethod': 'sequential',
   'messageCacheMaxSize': 50,
@@ -33,7 +32,7 @@ const BOT_CONFIG = {
     'compress': false
   }
 }
-
+// ---------------------------------------------------------------------
 const USER_AGENT = `FSS bot ${require('./package.json').version} , Node ${process.version} (${process.platform}${process.arch})`;
 
 exports.start = function(SETUP) {
@@ -126,7 +125,7 @@ bot.on('ready', () => {
 var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBERS','MANAGE_GUILD','ADD_REACTIONS','VIEW_AUDIT_LOG','PRIORITY_SPEAKER' ,'VIEW_CHANNEL','SEND_MESSAGES','SEND_TTS_MESSAGES','MANAGE_MESSAGES','READ_MESSAGE_HISTORY','MENTION_EVERYONE','USE_EXTERNAL_EMOJIS' ,'VIEW_GUILD_INSIGHTS','CONNECT','SPEAK','MUTE_MEMBERS','DEAFEN_MEMBERS','MOVE_MEMBERS','USE_VAD','CHANGE_NICKNAME','MANAGE_NICKNAMES','MANAGE_ROLES','MANAGE_WEBHOOKS','MANAGE_EMOJIS','STREAM','EMBED_LINKS','ATTACH_FILES','MANAGE_CHANNELS']  
   if(!checkMe.includes(PERMISSION)) {
 
-  console.log(`⚠ NOTICE: Your 'PERMISSION' variable (${PERMISSION}) is incorrect please check the readme to find the list of permissions... exiting....`);
+  console.log(`⚠ NOTICE: Your 'PERMISSION' variable (${PERMISSION}) is incorrect please, check the readme to find the list of permissions... exiting....`);
   process.exit(0);             
   }
 
@@ -184,7 +183,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
           }
           for (var i=0; i < fields.length; i++) {
             let field = fields[i];
-            if (field.length > 0) embed.addField('\u200b',field,true);
+            if (field.length > 0) embed.addField('\u200b', field, true);
           }
 
         }
@@ -222,7 +221,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
           resolved = true;
           resolve(true);
         } else {
-          log(LOG_LEVELS.ERROR,'Loop callback called after timeout');
+          log(LOG_LEVELS.ERROR, 'Loop callback called after timeout');
           reject(null);
         }
       })
@@ -374,7 +373,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
   });
 
   bot.login(BOT_TOKEN).then(null).catch(() => {
-    log(LOG_LEVELS.ERROR,'Unable to login check your login token');
+    log(LOG_LEVELS.ERROR, 'The token you provided is invalided. Please make sure you are using the correct one from https://discord.com/developers/applications!');
     console.error(e);
     process.exit(1);
   });
