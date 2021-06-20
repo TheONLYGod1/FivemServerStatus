@@ -30,15 +30,15 @@ A custom discord bot providing functionality for interacting with FiveM & Discor
 1. Open https://discord.com/developers/applications and sign in
 2. In the menu on the left side of the page make sure you are on `'General Information'`
 3. Locate the `'APPLICATION ID'` and click copy
-4. With the ID you just copied insert it into the URL below where `'APPLICATIONID'` is then open the link
+4. With the ID you just copied insert it into the URL below where `'APPLICATIONID'` is; then open the link
     - https://discord.com/oauth2/authorize?client_id=APPLICATIONID&scope=bot&permissions=8
 
 
 ## Setup
 
-1. Add the included fivemqueue to your server resources
+1. Add the included fivemqueue script to your server resources
 2. Start the fivemqueue in your server.cfg
-3. Set enviroment variables as described below
+3. Set enviroment variables as described below in a config.json file
 
 Variables | Description | Required?
 ------------ | ------------- | -------------
@@ -55,6 +55,7 @@ BUG_CHANNEL | Channel that will recieve bug reports | Yes
 BUG_LOG_CHANNEL | Channel that will log bug reports | Yes
 LOG_CHANNEL | Channel that will log status changes | Yes
 ##### Example of the config.json file
+### All variables must be filled for the bot to work properly!
 ```json    
 {
     "URL_SERVER": "http://127.0.0.1:30120",
@@ -72,7 +73,7 @@ LOG_CHANNEL | Channel that will log status changes | Yes
   } 
 ```
 
-## List of permissions for the `PERMISSION` variable
+## List of permissions for the `PERMISSION` variable in the config.json file
 Permission | Description
 ------------ | -------------
 ADMINISTRATOR | Implicitly has all permissions, and bypasses all channel overwrites
