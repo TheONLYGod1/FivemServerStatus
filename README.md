@@ -16,7 +16,7 @@ A custom discord bot providing functionality for interacting with FiveM & Discor
 ## Requirements:
 
 - Included fivemqueue
-- I have edited the source code of https://github.com/anderscripts/FiveM_Queue and added that it will change the queue count in the    variables so it will update accurately.
+- I have edited the source code of https://github.com/anderscripts/FiveM_Queue and it will now add the changes to the queue count variables.
 
 ## Creating a Bot Application
 1. Open https://discord.com/developers/applications and sign in
