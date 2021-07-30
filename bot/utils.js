@@ -1,4 +1,4 @@
-
+// Don't mess with anything in this file UNLESS you know what you are doing!
 const padChar = '　'
 
 exports.fullWidth = function(text) {
