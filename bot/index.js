@@ -61,16 +61,16 @@ if (process.argv.includes('-c') || process.argv.includes('--config')) {
     printValues(values);
     process.exit(0);
   }).catch((error) => {
-    console.log('Unable to load saved values, configuring all again');
+    console.log('Unable to load saved values, reconfiguring all saved values again');
     setup.createValues().then((values) => {
       setup.saveValues(values).then(() => {
-        printValues(values,'New values:');
+        printValues(values, 'New values:');
         process.exit(0);
       }).catch(console.error);
     }).catch(console.error);
   })
 } else {
-  console.log('Attempting to load enviroment');
+  console.log('Attempting to load enviroment values...');
   setup.loadValues().then((values) => {
     startBot(values);
   }).catch((error) => {
