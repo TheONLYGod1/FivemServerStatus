@@ -217,11 +217,12 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
    /// ██║░╚███║╚█████╔╝░░░██║░░░██║╚█████╔╝███████╗ ///
    /// ╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚══════╝ ///
    /////////////////////////////////////////////////////
-   /// When bot connects to the server successfully  ///
-   /// you may get an error saying it's offline once ///
-   /// or twice. THIS IS NOT AN ERROR WITH THE CODE! ///
-   /// The server times out requests sometimes and   ///
-   /// will produce this error. Just ignore it!      ///
+   /// When the bot connects to the server           ///
+   /// successfully you may get an error saying it's ///
+   /// offline once or twice. THIS IS NOT AN ERROR   ///
+   /// WITH THE CODE! The server times out requests  ///
+   /// sometimes and will produce this error.        ///
+   /// Just ignore it!                               ///
    /////////////////////////////////////////////////////
    ➼ Bot has been started and will attempt to connect to the server...
     `)
