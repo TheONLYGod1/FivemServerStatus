@@ -54,6 +54,7 @@ SUGGESTION_CHANNEL | Channel that will create suggestion embeds in | Yes
 BUG_CHANNEL | Channel that will recieve bug reports | Yes
 BUG_LOG_CHANNEL | Channel that will log bug reports | Yes
 LOG_CHANNEL | Channel that will log status changes | Yes
+RESTART_TIMES | Will display restart times for the server | Yes
 ##### Example of the config.json file
 ### All variables must be filled for the bot to work properly!
 ```json    
@@ -69,7 +70,8 @@ LOG_CHANNEL | Channel that will log status changes | Yes
     "SUGGESTION_CHANNEL": "617873319609368669",
     "BUG_CHANNEL": "617873444238786617",
     "BUG_LOG_CHANNEL": "657070256925442058",
-    "LOG_CHANNEL": "617873550648279051"
+    "LOG_CHANNEL": "617873550648279051",
+    "RESTART_TIMES": "12am 1pm 3pm"
   } 
 ```
 
