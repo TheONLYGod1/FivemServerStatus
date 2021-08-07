@@ -39,6 +39,7 @@ exports.start = function(SETUP) {
   const URL_SERVER = SETUP.URL_SERVER;
   const SERVER_NAME = SETUP.SERVER_NAME;
   const SERVER_LOGO = SETUP.SERVER_LOGO;
+  const RESTART_TIMES = SETUP.RESTART_TIMES;
   const PERMISSION = SETUP.PERMISSION;
   const URL_PLAYERS = new URL('/players.json', SETUP.URL_SERVER).toString();
   const URL_INFO = new URL('/info.json', SETUP.URL_SERVER).toString();
@@ -68,7 +69,7 @@ exports.start = function(SETUP) {
   var loop_callbacks = []; // for testing whether loop is still running
 
   const log = function(level,message) {
-    if (level >= LOG_LEVEL) console.log(`${new Date().toLocaleString()} :${level}: ${message}`);
+    if (level >= LOG_LEVEL) console.log(`𓊈${level}𓊉 ${message}`);
   };
 
   const getPlayers = function() {
@@ -96,9 +97,9 @@ exports.start = function(SETUP) {
   const sendOrUpdate = function(embed) {
     if (MESSAGE !== undefined) {
       MESSAGE.edit(embed).then(() => {
-        log(LOG_LEVELS.DEBUG, 'Update success');
-      }).catch(() => {
-        log(LOG_LEVELS.ERROR,' Update failed');
+        log(LOG_LEVELS.DEBUG, '✅ Update success');
+      }).catch((e) => {
+        log(LOG_LEVELS.ERROR, `❌ Update failed\nError: ${e}`);
       })
     } else {
       let channel = bot.channels.cache.get(CHANNEL_ID);
@@ -107,13 +108,13 @@ exports.start = function(SETUP) {
           MESSAGE = message;
           message.edit(embed).then(() => {
             log(LOG_LEVELS.SPAM, '✅ Update successful');
-          }).catch(() => {
-            log(LOG_LEVELS.ERROR, '❌ Update failed');
+          }).catch((e) => {
+            log(LOG_LEVELS.ERROR, `❌ Update failed\nError: ${e}`);
           });
         }).catch(() => {
           channel.send(embed).then((message) => {
             MESSAGE = message;
-            log(LOG_LEVELS.INFO,`✅ Status message sent. Message ID: ${message.id}`);
+            log(LOG_LEVELS.INFO,`✅ Status message sent.\nPlease update your config file using this message ID 𓊈${message.id}𓊉`);
           }).catch(console.error);
         })
       } else {
@@ -135,6 +136,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
     let embed = new Discord.MessageEmbed()
     .setAuthor(`${SERVER_NAME} | Server Status`, SERVER_LOGO)
     .setColor("#00f931")
+    .setThumbnail(SERVER_LOGO)
     .setFooter(TICK_N % 2 === 0 ? `${SERVER_NAME}` : `${SERVER_NAME}`)
     .setTimestamp(new Date())
     .addField('\n\u200b\nServer Name', `\`\`\`${SERVER_NAME}\`\`\``,false)
@@ -151,10 +153,12 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
     if (LAST_COUNT !== null) log(LOG_LEVELS.INFO,`Server offline ${URL_SERVER} (${URL_PLAYERS} ${URL_INFO})`);
     let embed = UpdateEmbed()
     .setColor(0xff0000)
+    .setThumbnail(SERVER_LOGO)
     .addFields(
-      { name: "Server Status",  value: "```❌ Offline```",   inline: true },
-      { name: "Waching",        value: "```--```",            inline: true },
-      { name: "Online Players", value: "```--```\n\u200b\n",  inline: true }
+      { name: "Server Status:",          value: "```❌ Offline```",    inline: true },
+      { name: "Waching:",                value: "```--```",            inline: true },
+      { name: "Online Players:",         value: "```--```\n\u200b\n",  inline: true },
+      { name: "Server Restart Times:",   value: "```N/A```",           inline: true }
     )
     sendOrUpdate(embed);
     LAST_COUNT = null;
@@ -167,10 +171,12 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
         let queue = vars['Queue'];
         let embed = UpdateEmbed()
         .addFields(
-          { name: "Server Status", value: "```✅ Online```",                                                                              inline: true },
-          { name: "Waching", value: `\`\`\`${queue === 'Enabled' || queue === undefined ? '0' : queue.split(':')[1].trim()}\`\`\``,       inline: true },
-          { name: "Online Players", value: `\`\`\`${players.length}/${MAX_PLAYERS}\`\`\`\n\u200b\n`,                                      inline: true }
+          { name: "Server Status",            value: "```✅ Online```",                                                                                    inline: true },
+          { name: "Waching",                  value: `\`\`\`${queue === 'Enabled' || queue === undefined ? '0' : queue.split(':')[1].trim()}\`\`\``,        inline: true },
+          { name: "Online Players",           value: `\`\`\`${players.length}/${MAX_PLAYERS}\`\`\`\n\u200b\n`,                                              inline: true },
+          { name: "Server Restart Times:",    value: `\`\`\`${RESTART_TIMES}\`\`\``,                                                                        inline: true }
           )
+        .setThumbnail(SERVER_LOGO)
         if (players.length > 0) {
           
           const fieldCount = 3;
@@ -202,7 +208,23 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
   };
 
   bot.on('ready',() => {
-    log(LOG_LEVELS.INFO,'Started...');
+    log(LOG_LEVELS.INFO,`
+   /////////////////////////////////////////////////////
+   /// ███╗░░██╗░█████╗░████████╗██╗░█████╗░███████╗ ///
+   /// ████╗░██║██╔══██╗╚══██╔══╝██║██╔══██╗██╔════╝ ///
+   /// ██╔██╗██║██║░░██║░░░██║░░░██║██║░░╚═╝█████╗░░ ///
+   /// ██║╚████║██║░░██║░░░██║░░░██║██║░░██╗██╔══╝░░ ///
+   /// ██║░╚███║╚█████╔╝░░░██║░░░██║╚█████╔╝███████╗ ///
+   /// ╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚══════╝ ///
+   /////////////////////////////////////////////////////
+   /// When bot connects to the server successfully  ///
+   /// you may get an error saying it's offline once ///
+   /// or twice. THIS IS NOT AN ERROR WITH THE CODE! ///
+   /// The server times out requests sometimes and   ///
+   /// will produce this error. Just ignore it!      ///
+   /////////////////////////////////////////////////////
+   ➼ Bot has been started and will attempt to connect to the server...
+    `)
     bot.user.setPresence({
       activity: {
           name: `${SERVER_NAME}`,
