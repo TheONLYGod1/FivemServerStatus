@@ -189,7 +189,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
           }
           for (var i=0; i < fields.length; i++) {
             let field = fields[i];
-            if (field.length > 0) embed.addField('\u200b', field, true);
+            if (field.length > 0) embed.addField('\u200b', field);
           }
 
         }
