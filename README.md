@@ -10,7 +10,7 @@
 
 
 A custom discord bot providing functionality for interacting with FiveM & Discord servers.
-- Updated & Edited by [Skylar](https://github.com/TheONLYGod1)
+- Updated & Edited by [TheONLYGod1](https://github.com/TheONLYGod1)
 ## Need Help?
 [![](https://discordapp.com/api/guilds/617870704662020136/widget.png?style=banner2)](https://discord.gg/pAKE2YK)
 ## Requirements:
@@ -123,7 +123,7 @@ MANAGE_EMOJIS | N/A
 ![Screenshot](https://godsnetwork.live/apis/fivem/img/ythv9.png)
 
 ## Credits
-- Skylar
+- Sky
     - https://github.com/TheONLYGod1
     - [![Discord Bots](https://top.gg/api/widget/status/515645834684006400.svg)](https://top.gg/bot/515645834684006400)
     - https://godsnetwork.live
