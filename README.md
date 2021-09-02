@@ -121,7 +121,8 @@ Command | Description
 `+status <Message>` | Adds a warning message to the server status embed
 `+status clear` | Clears the warning message
 `+help` | Displays the bots commands
-
+    
+## Example Embed
 <kbd> ![Screenshot](https://godsnetwork.live/apis/fivem/img/ythv9.png)
     
 ## Credits
