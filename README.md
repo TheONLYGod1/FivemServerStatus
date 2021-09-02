@@ -12,7 +12,7 @@
 A custom discord bot providing functionality for interacting with FiveM & Discord servers.
 - Updated & Edited by [TheONLYGod1](https://github.com/TheONLYGod1)
 ## Need Help?
-[![](https://discordapp.com/api/guilds/617870704662020136/widget.png?style=banner2)](https://discord.gg/pAKE2YK)
+<kbd> [![](https://discordapp.com/api/guilds/617870704662020136/widget.png?style=banner2)](https://discord.gg/pAKE2YK)
 ## Requirements:
 
 - Included fivemqueue
@@ -35,10 +35,9 @@ A custom discord bot providing functionality for interacting with FiveM & Discor
 
 
 ## Setup
-
 1. Add the included fivemqueue script to your server resources
-2. Start the fivemqueue in your server.cfg
-3. Set enviroment variables as described below in a config.json file
+2. Start the fivemqueue in your `server.cfg`
+3. Set enviroment variables as described below in a `config.json` file
 
 Variables | Description | Required?
 ------------ | ------------- | -------------
@@ -55,8 +54,8 @@ BUG_CHANNEL | Channel that will recieve bug reports | Yes
 BUG_LOG_CHANNEL | Channel that will log bug reports | Yes
 LOG_CHANNEL | Channel that will log status changes | Yes
 RESTART_TIMES | Will display restart times for the server | Yes
-##### Example of the config.json file
-### All variables must be filled for the bot to work properly!
+##### Example of the `config.json` file
+### All variables _must be filled_ for the bot to work properly!
 ```json    
 {
     "URL_SERVER": "http://127.0.0.1:30120",
@@ -71,63 +70,65 @@ RESTART_TIMES | Will display restart times for the server | Yes
     "BUG_CHANNEL": "617873444238786617",
     "BUG_LOG_CHANNEL": "657070256925442058",
     "LOG_CHANNEL": "617873550648279051",
-    "RESTART_TIMES": "12am 1pm 3pm"
+    "RESTART_TIMES": "12am, 1pm, 3pm"
   } 
 ```
 
-## List of permissions for the `PERMISSION` variable in the config.json file
+## List of permissions for the `PERMISSION` variable in the `config.json` file
 Permission | Description
 ------------ | -------------
 ADMINISTRATOR | Implicitly has all permissions, and bypasses all channel overwrites
 CREATE_INSTANT_INVITE | Create invitations to the guild
-KICK_MEMBERS | N/A
-BAN_MEMBERS | N/A
+KICK_MEMBERS | Allows kicking members
+BAN_MEMBERS | Allows banning members
 MANAGE_CHANNELS | Edit and reorder channels
 MANAGE_GUILD | Edit the guild information, region, etc.
 ADD_REACTIONS | Add new reactions to messages
-VIEW_AUDIT_LOG | N/A
-PRIORITY_SPEAKER | N/A
-STREAM | N/A
-VIEW_CHANNEL | N/A
-SEND_MESSAGES | N/A
-SEND_TTS_MESSAGES | N/A
+VIEW_AUDIT_LOG | Allows for viewing of audit logs
+PRIORITY_SPEAKER | Allows for using priority speaker in a voice channel
+STREAM | Allows the user to go live
+VIEW_CHANNEL | Allows guild members to view a channel, which includes reading messages in text channels
+SEND_MESSAGES | Allows for sending messages in a channel
+SEND_TTS_MESSAGES | Allows for sending of `/tts` messages
 MANAGE_MESSAGES | Delete messages and reactions
 EMBED_LINKS | Links posted will have a preview embedded
-ATTACH_FILES | N/A
+ATTACH_FILES | Allows for uploading images and files
 READ_MESSAGE_HISTORY | View messages that were posted prior to opening Discord
-MENTION_EVERYONE | N/A
+MENTION_EVERYONE | Allows for using the `@everyone` tag to notify all users in a channel, and the `@here` tag to notify all online users in a channel
 USE_EXTERNAL_EMOJIS | Use emojis from different guilds
-VIEW_GUILD_INSIGHTS | N/A
+VIEW_GUILD_INSIGHTS | Allows for viewing guild insights
 CONNECT | Connect to a voice channel
 SPEAK | Speak in a voice channel
 MUTE_MEMBERS | Mute members across all voice channels
 DEAFEN_MEMBERS | Deafen members across all voice channels
 MOVE_MEMBERS | Move members between voice channels
 USE_VAD | Use voice activity detection
-CHANGE_NICKNAME | N/A
+CHANGE_NICKNAME | Allows for modification of own nickname
 MANAGE_NICKNAMES | Change other members' nicknames
-MANAGE_ROLES | N/A
-MANAGE_WEBHOOKS | N/A
-MANAGE_EMOJIS | N/A
+MANAGE_ROLES | Allows management and editing of roles
+MANAGE_WEBHOOKS | Allows management and editing of webhooks
+MANAGE_EMOJIS | Allows management and editing of emojis
 
-## Running
-1. `npm i` or `npm install`
-2. `npm start` or `node ./index.js`
-
+## How to start/run the bot
+Way #1 | Way #2ㅤ 
+------------ | -------------
+1\. `npm i` | 1\. `npm install`
+2\. `npm start` | 2\. `node ./index.js`
 
 ## Commands
-1. `+status <Message>` - Adds a warning message to the server status embed
-2. `+status clear` - Clears the warning message
-3. `+help` - Displays the bots commands
-  
-![Screenshot](https://godsnetwork.live/apis/fivem/img/ythv9.png)
+Command | Description 
+------------ | -------------
+`+status <Message>` | Adds a warning message to the server status embed
+`+status clear` | Clears the warning message
+`+help` | Displays the bots commands
 
+<kbd> ![Screenshot](https://godsnetwork.live/apis/fivem/img/ythv9.png)
+    
 ## Credits
-- Sky
-    - https://github.com/TheONLYGod1
-    - [![Discord Bots](https://top.gg/api/widget/status/515645834684006400.svg)](https://top.gg/bot/515645834684006400)
-    - https://godsnetwork.live
-- Roque - https://github.com/RoqueDEV
-- Douile - https://github.com/Douile
-- drazero - https://github.com/draZer0
-- Queue script - https://github.com/anderscripts/FiveM_Queue
+Name | URLS | Other
+------------ | ------------- | -------------
+Sky | https://github.com/TheONLYGod1 \| https://godsnetwork.live | [![Discord Bots](https://top.gg/api/widget/status/515645834684006400.svg)](https://top.gg/bot/515645834684006400)
+Roque | https://github.com/RoqueDEV | 
+Douile | https://github.com/Douile | 
+Drazero | https://github.com/draZer0 | 
+Queue script | https://github.com/anderscripts/FiveM_Queue | 
