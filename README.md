@@ -8,7 +8,8 @@
 [![](https://img.shields.io/github/languages/count/TheONLYGod1/FivemServerStatus)](https://github.com/TheONLYGod1/FivemServerStatus/)
 [![](https://img.shields.io/github/languages/top/TheONLYGod1/FivemServerStatus)](https://github.com/TheONLYGod1/FivemServerStatus/)
 
-
+### NOTICE: I have been made aware that you don't have to include the FiveM Queue script in order for the bot to funtion.
+### NOTICE: If you get an error in console saying `(node:121108) UnhandledPromiseRejectionWarning: TypeError: fields.flat is not a function` you need to update your node version and everything will work after.
 A custom discord bot providing functionality for interacting with FiveM & Discord servers.
 - Updated & Edited by [TheONLYGod1](https://github.com/TheONLYGod1)
 ## Need Help?
