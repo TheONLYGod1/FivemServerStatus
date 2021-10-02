@@ -45,6 +45,7 @@ Variables | Description | Required?
 URL_SERVER | Base URL for the FiveM server e.g. http://127.0.0.1:3501 **(don't end with /)** | Yes
 SERVER_NAME | The name of your FiveM server | Yes
 SERVER_LOGO | A logo for your FiveM server | No
+EMBED_COLOR | Color of the status embed | Yes
 PERMISSION | Permission needed to set the server status `+status` | Yes
 LOG_LEVEL | Number __0-4__ specifying level of logs *4 = No Logs* | Yes
 BOT_TOKEN | Discord bot token | Yes
@@ -62,6 +63,7 @@ RESTART_TIMES | Will display restart times for the server | Yes
     "URL_SERVER": "http://127.0.0.1:30120",
     "SERVER_NAME": "BaySide RP",
     "SERVER_LOGO": "https://cdn.discordapp.com/icons/820669620339998770/cdbc882432a90b72ee921f57643526fa.webp?size=128",
+    "EMBED_COLOR": "#b434eb",
     "LOG_LEVEL": "2",
     "PERMISSION": "MANAGE_MESSAGES",
     "BOT_TOKEN": "[BOT TOKEN HERE]",
