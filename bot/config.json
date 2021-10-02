@@ -2,6 +2,7 @@
     "URL_SERVER": "http://127.0.0.1:30120",
     "SERVER_NAME": "BaySide RP",
     "SERVER_LOGO": "https://cdn.discordapp.com/icons/820669620339998770/cdbc882432a90b72ee921f57643526fa.webp?size=128",
+    "EMBED_COLOR": "#b434eb",
     "LOG_LEVEL": "2",
     "PERMISSION": "MANAGE_MESSAGES",
     "BOT_TOKEN": "[BOT TOKEN]",
