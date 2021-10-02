@@ -39,6 +39,7 @@ exports.start = function(SETUP) {
   const URL_SERVER = SETUP.URL_SERVER;
   const SERVER_NAME = SETUP.SERVER_NAME;
   const SERVER_LOGO = SETUP.SERVER_LOGO;
+  const EMBED_COLOR = SETUP.EMBED_COLOR;
   const RESTART_TIMES = SETUP.RESTART_TIMES;
   const PERMISSION = SETUP.PERMISSION;
   const URL_PLAYERS = new URL('/players.json', SETUP.URL_SERVER).toString();
@@ -135,7 +136,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
     let dot = TICK_N % 2 === 0 ? 'RP' : 'Roleplay';
     let embed = new Discord.MessageEmbed()
     .setAuthor(`${SERVER_NAME} | Server Status`, SERVER_LOGO)
-    .setColor("#00f931")
+    .setColor(EMBED_COLOR)
     .setThumbnail(SERVER_LOGO)
     .setFooter(TICK_N % 2 === 0 ? `${SERVER_NAME}` : `${SERVER_NAME}`)
     .setTimestamp(new Date())
@@ -335,7 +336,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
             let status = message.content.substr(7).trim();
             let embed =  new Discord.MessageEmbed()
             .setAuthor(message.member.nickname ? message.member.nickname : message.author.tag, message.author.displayAvatarURL())
-            .setColor(0x2894C2)
+            .setColor(EMBED_COLOR)
             .setTitle('☑️ Updated status message')
             .setTimestamp(new Date());
             if (status === 'clear') {
