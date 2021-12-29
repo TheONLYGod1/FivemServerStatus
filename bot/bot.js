@@ -157,7 +157,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
     .setThumbnail(SERVER_LOGO)
     .addFields(
       { name: "Server Status:",          value: "```❌ Offline```",    inline: true },
-      { name: "Waching:",                value: "```--```",            inline: true },
+      { name: "Watching:",                value: "```--```",            inline: true },
       { name: "Online Players:",         value: "```--```\n\u200b\n",  inline: true },
       { name: "Server Restart Times:",   value: "```N/A```",           inline: true }
     )
@@ -173,7 +173,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
         let embed = UpdateEmbed()
         .addFields(
           { name: "Server Status",            value: "```✅ Online```",                                                                                    inline: true },
-          { name: "Waching",                  value: `\`\`\`${queue === 'Enabled' || queue === undefined ? '0' : queue.split(':')[1].trim()}\`\`\``,        inline: true },
+          { name: "Watching",                  value: `\`\`\`${queue === 'Enabled' || queue === undefined ? '0' : queue.split(':')[1].trim()}\`\`\``,        inline: true },
           { name: "Online Players",           value: `\`\`\`${players.length}/${MAX_PLAYERS}\`\`\`\n\u200b\n`,                                              inline: true },
           { name: "Server Restart Times:",    value: `\`\`\`${RESTART_TIMES}\`\`\``,                                                                        inline: true }
           )
