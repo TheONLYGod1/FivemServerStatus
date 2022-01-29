@@ -60,7 +60,7 @@ exports.start = function(SETUP) {
   const BUG_CHANNEL = SETUP.BUG_CHANNEL;
   const BUG_LOG_CHANNEL = SETUP.BUG_LOG_CHANNEL;
   const LOG_CHANNEL = SETUP.LOG_CHANNEL;
-  const UPDATE_TIME = 2500; // in ms
+  const UPDATE_TIME = 10000; // in ms
 
   var TICK_N = 0;
   var MESSAGE;
