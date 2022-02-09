@@ -8,16 +8,17 @@
 [![](https://img.shields.io/github/languages/count/TheONLYGod1/FivemServerStatus)](https://github.com/TheONLYGod1/FivemServerStatus/)
 [![](https://img.shields.io/github/languages/top/TheONLYGod1/FivemServerStatus)](https://github.com/TheONLYGod1/FivemServerStatus/)
 
-### NOTICE: If you get an error in console saying `(node:121108) UnhandledPromiseRejectionWarning: TypeError: fields.flat is not a function` you need to update your node version and everything will work after.
 A custom discord bot providing functionality for interacting with FiveM & Discord servers.
 - Updated & Edited by [TheONLYGod1](https://github.com/TheONLYGod1)
 ## Need Help?
 <kbd> [![](https://discordapp.com/api/guilds/617870704662020136/widget.png?style=banner2)](https://discord.gg/pAKE2YK)
-## Requirements:
-
-- Included fivemqueue
-- I have edited the source code of https://github.com/anderscripts/FiveM_Queue and it will now add the changes to the queue count variables.
-
+## Notices:
+- The FiveM Queue script that was included the original repository is no longer needed to run this project
+- If you are unable to get the bot to query your server **please** make sure you check that the IP address and port for you server are correct in the config.json file before asking for support
+    - Also make sure your firewall on your host isn't blocking inbound connections
+- If you get an error in console saying `(node:121108) UnhandledPromiseRejectionWarning: TypeError: fields.flat is not a function` you'll need to update your Node.js version. I have provided a link-to that explains how to update your Node.js version [here](https://phoenixnap.com/kb/update-node-js-version)
+- If you get an error in console saying `! Make sure you have the latest version of node.js and npm installed.` you'll need to make sure both your NPM & Node.js is on the latest version. I have provided a link-to that explains how to update your NPM version [here](https://docs.npmjs.com/try-the-latest-stable-version-of-npm) and Node.js version [here](https://phoenixnap.com/kb/update-node-js-version)
+    
 ## Creating a Bot Application
 1. Open https://discord.com/developers/applications and sign in
 2. Click the button that says `'New Application'` in the top right hand corner of the page
@@ -112,6 +113,7 @@ MANAGE_WEBHOOKS | Allows management and editing of webhooks
 MANAGE_EMOJIS | Allows management and editing of emojis
 
 ## How to start/run the bot
+Make sure you are in the directory where the bot files are located before running the following commands!
 Way #1 | Way #2ㅤ 
 ------------ | -------------
 1\. `npm i` | 1\. `npm install`
@@ -130,7 +132,7 @@ Command | Description
 ## Credits
 Name | URLS | Other
 ------------ | ------------- | -------------
-Sky | https://github.com/TheONLYGod1 \| https://godsnetwork.live | [![Discord Bots](https://top.gg/api/widget/status/515645834684006400.svg)](https://top.gg/bot/515645834684006400)
+Sky | https://github.com/TheONLYGod1 \| https://godsnetwork.live | [God's Groove](https://top.gg/bot/515645834684006400)
 Roque | https://github.com/RoqueDEV | 
 Douile | https://github.com/Douile | 
 Drazero | https://github.com/draZer0 | 
