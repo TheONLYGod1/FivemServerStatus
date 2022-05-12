@@ -117,7 +117,7 @@ Make sure you are in the directory where the bot files are located before runnin
 Way #1 | Way #2ㅤ 
 ------------ | -------------
 1\. `npm i` | 1\. `npm install`
-2\. `npm start` | 2\. `node ./index.js`
+2\. `node start` | 2\. `node ./index.js`
 
 ## Commands
 Command | Description 
