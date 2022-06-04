@@ -13,6 +13,7 @@ A custom discord bot providing functionality for interacting with FiveM & Discor
 ## Need Help?
 <kbd> [![](https://discordapp.com/api/guilds/617870704662020136/widget.png?style=banner2)](https://discord.gg/pAKE2YK)
 ## Notices:
+- Please make sure you Google your errors before joining the support server. I don't have time to help you setup the bot. Google is your friend make use of it.... stack overflow is very handy!
 - The FiveM Queue script that was included the original repository is no longer needed to run this project
 - If you are unable to get the bot to query your server **please** make sure you check that the IP address and port for you server are correct in the config.json file before asking for support
     - Also make sure your firewall on your host isn't blocking inbound connections
