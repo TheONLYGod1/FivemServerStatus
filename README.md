@@ -1,7 +1,9 @@
-## NOTICE: With the release of text channels in voice channels, any version of discord.js older than v13.8.0 will crash upon creating. I am aware of this and do plan on updating the code to to prevent the crashes..
+## NOTICE: This is a BETA version!! This may not function properly or cause issues, please do no report errors with this branch!
 
-
-# FiveM Server Status
+## Notes: This branch will be merged with the main once the update to Discord.js@v13.8.0 is finished.
+## Updates:
+# No updates yet...
+### FiveM Server Status
 [![](https://img.shields.io/github/forks/TheONLYGod1/FivemServerStatus?label=Fork&style=social)](https://github.com/TheONLYGod1/FivemServerStatus/fork)
 [![](https://img.shields.io/badge/discord.js-v12.5.3-brightgreen)](https://github.com/TheONLYGod1/FivemServerStatus/)
 [![](https://img.shields.io/node/v/bot)](https://github.com/TheONLYGod1/FivemServerStatus/)
