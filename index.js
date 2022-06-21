@@ -13,7 +13,6 @@ https://godsnetwork.live
 Environment setup
 Set environment variables as described below:
   URL_SERVER - base url for fiveM server e.g. http://127.0.0.1:3501
-  LOG_LEVEL - Int of enum 0-4 specifying level of logs to display with 4 as no logs
   BOT_TOKEN - Discord bot token
   CHANNEL_ID - channel id for updates to be pushed to
   MESSAGE_ID - message id of previous update to edit (not required)
@@ -21,10 +20,17 @@ Set environment variables as described below:
   BUG_CHANNEL - channel to recieve bug reports
   BUG_LOG_CHANNEL - channel to log bug reports
   LOG_CHANNEL - channel to log status changes
+  EMBED_COLOR - color of the status embed
+  PERMISSION - permission node that users need to run commands
+  BOT_TOKEN - discord application token AKA bot token
+  DEBUG - shows debug logs (spammy)
+  WEBSITE_URL - creates a link button for the status embed
+  RESTART_TIMES - displays what times the server restarts
 */
 
 const setup = require('./setup.js');
 const { start } = require('./bot.js');
+const chalk = require('chalk');
 
 const printValues = function(values, text) {
   console.log(text ? text : 'Current values:');
@@ -34,7 +40,7 @@ const printValues = function(values, text) {
 }
 
 const startBot = function(values) {
-  console.log('Starting bot');
+  console.log(`${chalk.bgBlue("[INFO]")} ${chalk.blue("Starting bot... this may take a few seconds to start...")}`);
   var bot = start(values);
   bot.on('restart',() => {
     console.log('\nRestarting bot');
@@ -42,7 +48,7 @@ const startBot = function(values) {
     bot = start(values);
   })
   var shutdown = function() {
-    console.log('Shutting down');
+    console.log(`${chalk.bgRed(`[STATUS]`)} ${chalk.red('Shutting down')}`);
     let destructor = bot.destroy();
     if (destructor) {
       destructor.then(() => {
@@ -70,7 +76,7 @@ if (process.argv.includes('-c') || process.argv.includes('--config')) {
     }).catch(console.error);
   })
 } else {
-  console.log('Attempting to load enviroment values...');
+  console.log(`${chalk.bold.bgYellow(`[LOAD]`)} ${chalk.bold.yellow('Attempting to load enviroment values...')}`);
   setup.loadValues().then((values) => {
     startBot(values);
   }).catch((error) => {

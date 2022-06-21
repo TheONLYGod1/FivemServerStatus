@@ -18,11 +18,6 @@ const TEMPLATE = {
     'message': 'Permission for the +status command',
     'required': true,
   },
-  'LOG_LEVEL': {
-    'message': 'Number 0-4 specifying level of logs 4 = No Logs',
-    'required': false,
-    'default': 3,
-  },
   'BOT_TOKEN': {
     'message': 'Discord bot token',
     'required': true,
@@ -52,6 +47,19 @@ const TEMPLATE = {
     'message': 'Channel that will log status changes',
     'required': true,
   },
+  'DEBUG': {
+    'message': 'Disable/Enable debug logs (spammy)',
+    'required': true
+  },
+  'WEBSITE': {
+    'message': 'Creates a link button for the status embed',
+    'required': false
+  },
+  'RESTART_TIMES': {
+    'message': 'Displays restart time of your server',
+    'required': true
+  }
+  
 };
 const SAVE_FILE = './config.json';
 
