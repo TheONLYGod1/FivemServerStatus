@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "FiveM Server Status",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,8 @@
   "author": "Douile / Roque / Skylar",
   "license": "GPL-3.0",
   "dependencies": {
-    "discord.js": "^12.5.3",
+    "chalk": "^4.1.2",
+    "discord.js": "^13.8.0",
     "fetch-timeout": "0.0.2",
     "fs": "0.0.1-security",
     "libsodium-wrappers": "^0.7.4",
