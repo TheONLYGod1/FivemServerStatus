@@ -1,9 +1,14 @@
-## NOTICE: With the release of text channels in voice channels, any version of discord.js older than v13.8.0 will crash upon creating. I am aware of this and do plan on updating the code to to prevent the crashes..
+## NOTICE: This is a BETA version!! This may not function properly or cause issues, please do no report errors with this branch!
 
-
-# FiveM Server Status
+## Updates:
+- New config values!
+- Removed LOG_LEVEL config values
+- Better console logging + color outputs
+- Status embed now has a button + website button config located in config.json
+- Check the commit for more changes!
+### FiveM Server Status
 [![](https://img.shields.io/github/forks/TheONLYGod1/FivemServerStatus?label=Fork&style=social)](https://github.com/TheONLYGod1/FivemServerStatus/fork)
-[![](https://img.shields.io/badge/discord.js-v12.5.3-brightgreen)](https://github.com/TheONLYGod1/FivemServerStatus/)
+[![](https://img.shields.io/badge/discord.js-v13.8.0-brightgreen)](https://github.com/TheONLYGod1/FivemServerStatus/)
 [![](https://img.shields.io/node/v/bot)](https://github.com/TheONLYGod1/FivemServerStatus/)
 [![](https://img.shields.io/maintenance/yes/2022)](https://github.com/TheONLYGod1/FivemServerStatus/)
 [![](https://img.shields.io/github/issues/TheONLYGod1/FivemServerStatus)](https://github.com/TheONLYGod1/FivemServerStatus/)
@@ -17,7 +22,6 @@ A custom discord bot providing functionality for interacting with FiveM & Discor
 <kbd> [![](https://discordapp.com/api/guilds/617870704662020136/widget.png?style=banner2)](https://discord.gg/pAKE2YK)
 ## Notices:
 - Please make sure you Google your errors before joining the support server. I don't have time to help you setup the bot. Google is your friend make use of it.... stack overflow is very handy!
-- The FiveM Queue script that was included the original repository is no longer needed to run this project
 - If you are unable to get the bot to query your server **please** make sure you check that the IP address and port for you server are correct in the config.json file before asking for support
     - Also make sure your firewall on your host isn't blocking inbound connections
 - If you get an error in console saying `(node:121108) UnhandledPromiseRejectionWarning: TypeError: fields.flat is not a function` you'll need to update your Node.js version. I have provided a link-to that explains how to update your Node.js version [here](https://phoenixnap.com/kb/update-node-js-version)
@@ -39,10 +43,35 @@ A custom discord bot providing functionality for interacting with FiveM & Discor
     - https://discord.com/oauth2/authorize?client_id=APPLICATIONID&scope=bot&permissions=8
 
 
-## Setup
-1. Add the included fivemqueue script to your server resources
-2. Start the fivemqueue in your `server.cfg`
-3. Set enviroment variables as described below in a `config.json` file
+```yaml
+   /////////////////////////////////////////////////////
+   /// ███╗░░██╗░█████╗░████████╗██╗░█████╗░███████╗ ///
+   /// ████╗░██║██╔══██╗╚══██╔══╝██║██╔══██╗██╔════╝ ///
+   /// ██╔██╗██║██║░░██║░░░██║░░░██║██║░░╚═╝█████╗░░ ///
+   /// ██║╚████║██║░░██║░░░██║░░░██║██║░░██╗██╔══╝░░ ///
+   /// ██║░╚███║╚█████╔╝░░░██║░░░██║╚█████╔╝███████╗ ///
+   /// ╚═╝░░╚══╝░╚════╝░░░░╚═╝░░░╚═╝░╚════╝░╚══════╝ ///
+   /////////////////////////////////////////////////////
+   /// If your FiveM server is not using the default ///
+   /// server port (30120) the bot WILL NOT be able  ///
+   /// to query the server. You'll need to have the  ///
+   /// FiveM Queue Script installed on your server.  ///
+   /////////////////////////////////////////////////////
+   /// If the bot isn't able to check your server    ///
+   /// make sure you don't have player endpoints     ///
+   /// set to be hidden in your server.cfg.          ///
+   /// "Hide player endpoints in external log output"///
+   /////////////////////////////////////////////////////
+```
+# FiveM Queue script is located [here](https://github.com/RoqueDEV/FivemServerStatus/tree/master/fivemqueue)
+## Setup / Start
+1. Download all of the files
+2. Set enviroment variables as described below in a `config.json` file
+3. Navigate to the directory where the bot files are located
+    - `cd /path/to/bot/files`
+4. Run `npm install` in your terminal
+5. Run `npm start` in your terminal
+6. Enjoy!
 
 Variables | Description | Required?
 ------------ | ------------- | -------------
@@ -51,7 +80,6 @@ SERVER_NAME | The name of your FiveM server | Yes
 SERVER_LOGO | A logo for your FiveM server | No
 EMBED_COLOR | Color of the status embed | Yes
 PERMISSION | Permission needed to set the server status `+status` | Yes
-LOG_LEVEL | Number __0-4__ specifying level of logs *4 = No Logs* | Yes
 BOT_TOKEN | Discord bot token | Yes
 CHANNEL_ID | Channel ID that will be used for updates to be pushed to | Yes
 MESSAGE_ID | Message ID of previous update to edit | No 
@@ -59,16 +87,18 @@ SUGGESTION_CHANNEL | Channel that will create suggestion embeds in | Yes
 BUG_CHANNEL | Channel that will recieve bug reports | Yes
 BUG_LOG_CHANNEL | Channel that will log bug reports | Yes
 LOG_CHANNEL | Channel that will log status changes | Yes
+DEBUG | Shows debug logs (spammy in console) | Yes
+WEBSITE_URL | Creates a link button for the status embed | No
 RESTART_TIMES | Will display restart times for the server | Yes
-##### Example of the `config.json` file
-### All variables _must be filled_ for the bot to work properly!
+SHOW_PLAYERS | Choose to either show or hide the online player list | Yes
+
+## Example of the `config.json` file
 ```json    
 {
     "URL_SERVER": "http://127.0.0.1:30120",
     "SERVER_NAME": "BaySide RP",
     "SERVER_LOGO": "https://cdn.discordapp.com/icons/820669620339998770/cdbc882432a90b72ee921f57643526fa.webp?size=128",
     "EMBED_COLOR": "#b434eb",
-    "LOG_LEVEL": "2",
     "PERMISSION": "MANAGE_MESSAGES",
     "BOT_TOKEN": "[BOT TOKEN HERE]",
     "CHANNEL_ID": "617873518960574464",
@@ -77,10 +107,12 @@ RESTART_TIMES | Will display restart times for the server | Yes
     "BUG_CHANNEL": "617873444238786617",
     "BUG_LOG_CHANNEL": "657070256925442058",
     "LOG_CHANNEL": "617873550648279051",
-    "RESTART_TIMES": "12am, 1pm, 3pm"
+    "DEBUG": false,
+    "WEBSITE_URL": "https://godsnetwork.live", 
+    "RESTART_TIMES": "12am, 1pm, 3pm",
+    "SHOW_PLAYERS": true
   } 
 ```
-
 ## List of permissions for the `PERMISSION` variable in the `config.json` file
 Permission | Description
 ------------ | -------------
@@ -114,14 +146,14 @@ CHANGE_NICKNAME | Allows for modification of own nickname
 MANAGE_NICKNAMES | Change other members' nicknames
 MANAGE_ROLES | Allows management and editing of roles
 MANAGE_WEBHOOKS | Allows management and editing of webhooks
-MANAGE_EMOJIS | Allows management and editing of emojis
-
-## How to start/run the bot
-Make sure you are in the directory where the bot files are located before running the following commands!
-Way #1 | Way #2ㅤ 
------------- | -------------
-1\. `npm i` | 1\. `npm install`
-2\. `npm start` | 2\. `node ./index.js`
+MANAGE_EMOJIS_AND_STICKERS | Allows management and editing of emojis and stickers
+USE_APPLICATION_COMMANDS | Allows members to use application commands, including slash commands and context menu commands
+MANAGE_THREADS | Allows for deleting and archiving threads, and viewing all private threads
+CREATE_PUBLIC_THREADS | Allows for creating public and announcement threads	
+CREATE_PRIVATE_THREADS | Allows for creating private threads	
+SEND_MESSAGES_IN_THREADS | Allows for sending messages in threads	    
+USE_EXTERNAL_STICKERS | Allows the usage of custom stickers from other servers	
+MODERATE_MEMBERS | Allows for timing out users to prevent them from sending or reacting to messages in chat and threads, and from speaking in voice and stage channels
 
 ## Commands
 Command | Description 
@@ -130,8 +162,8 @@ Command | Description
 `+status clear` | Clears the warning message
 `+help` | Displays the bots commands
     
-## Example Embed
-<kbd> ![Screenshot](https://godsnetwork.live/apis/fivem/img/ythv9.png)
+## Example Response
+<kbd> ![Screenshot](https://cdn.discordapp.com/attachments/349738315731173376/988892484178436156/unknown.png)
     
 ## Credits
 Name | URLS | Other

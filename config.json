@@ -1,0 +1,18 @@
+{
+    "URL_SERVER": "http://127.0.0.1:30120",
+    "SERVER_NAME": "",
+    "SERVER_LOGO": "",
+    "EMBED_COLOR": "#00f931",
+    "PERMISSION": "",
+    "BOT_TOKEN": "[BOT TOKEN]",
+    "CHANNEL_ID": "",
+    "MESSAGE_ID": "",
+    "SUGGESTION_CHANNEL": "",
+    "BUG_CHANNEL": "",
+    "BUG_LOG_CHANNEL": "",
+    "LOG_CHANNEL": "",
+    "DEBUG": false,
+    "WEBSITE_URL": "",
+    "RESTART_TIMES": "",
+    "SHOW_PLAYERS": true
+  }
