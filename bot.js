@@ -229,8 +229,8 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
    /// FiveM Queue Script installed on your server.  ///
    /////////////////////////////////////////////////////
    /// If the bot isn't able to check your server    ///
-   /// make sure you don't have player endpoints set ///
-   /// to false in your server.cfg.                  ///
+   /// make sure you don't have player endpoints     ///
+   /// set to be hidden in your server.cfg.          ///
    /// "Hide player endpoints in external log output"///
    /////////////////////////////////////////////////////
    ➼ Bot has been started and will attempt to connect to the server...`)}
@@ -268,7 +268,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
 
   bot.on('debug',(info) => {
     if(DEBUG == true) {
-    console.log(`${chalk.bgBlue(`[DEBUG]`)} ${chalk.blue(info)}`)
+    console.log(`${chalk.bold.bgCyan(`[DEBUG]`)} ${chalk.bold.cyan(info)}`)
     }
   })
 
@@ -404,7 +404,6 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
 
   bot.login(BOT_TOKEN).then(null).catch(() => {
     console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red('The token you provided is invalided. Please make sure you are using the correct one from https://discord.com/developers/applications!')}`)
-    console.error(e);
     process.exit(1);
   });
 
