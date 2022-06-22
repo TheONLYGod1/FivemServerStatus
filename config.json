@@ -13,5 +13,6 @@
     "LOG_CHANNEL": "",
     "DEBUG": false,
     "WEBSITE_URL": "",
-    "RESTART_TIMES": ""
+    "RESTART_TIMES": "",
+    "SHOW_PLAYERS": true
   }
