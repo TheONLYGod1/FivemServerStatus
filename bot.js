@@ -16,6 +16,7 @@ exports.start = function(SETUP) {
   const RESTART_TIMES = SETUP.RESTART_TIMES;
   const PERMISSION = SETUP.PERMISSION;
   const DEBUG = SETUP.DEBUG;
+  const SHOW_PLAYERS = SETUP.SHOW_PLAYERS;
   const WEBSITE_URL = SETUP.WEBSITE_URL;
   const BOT_TOKEN = SETUP.BOT_TOKEN;
   const CHANNEL_ID = SETUP.CHANNEL_ID;
@@ -170,21 +171,13 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
           { name: "Server Restart Times:",    value: `\`\`\`${RESTART_TIMES}\`\`\``,                                                                        inline: true }
           )
         .setThumbnail(SERVER_LOGO)
-        if (players.length > 0) {
-          
-          const fieldCount = 3;
-          const fields = new Array(fieldCount);
-          fields.fill('');
-         
-          fields[0] = `**Players On:**\n`;
+        if (players.length > 0 && SHOW_PLAYERS == true) {
+          let playersOnline = [];
           for (var i=0; i < players.length; i++) {
-            fields[(i+1)%fieldCount] += `${players[i].name.substr(0,12)} Ping: ${players[i].ping}ms\n`; // first 12 characters of players name
-          }
-          for (var i=0; i < fields.length; i++) {
-            let field = fields[i];
-            if (field.length > 0) embed.addField('\u200b', field);
-          }
-
+            playersOnline.push(`**${players[i].name.substr(0,12)}** - \`${players[i].ping}ms\``) // first 12 characters of players name
+          }  
+            embed.setDescription(`__**Online Players**__:\n${playersOnline.toString().replace(/\,\)/g,', ')}`)
+            playersOnline = [];
         }
         if(WEBSITE_URL.startsWith("https://") || WEBSITE_URL.startsWith("http://")) {
           const row = new MessageActionRow()

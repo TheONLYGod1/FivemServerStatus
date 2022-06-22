@@ -55,6 +55,10 @@ const TEMPLATE = {
     'message': 'Creates a link button for the status embed',
     'required': false
   },
+  'SHOW_PLAYERS': {
+    'message': 'Choose to either hide or show the online players',
+    'required': true
+  },
   'RESTART_TIMES': {
     'message': 'Displays restart time of your server',
     'required': true

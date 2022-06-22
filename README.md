@@ -90,7 +90,8 @@ LOG_CHANNEL | Channel that will log status changes | Yes
 DEBUG | Shows debug logs (spammy in console) | Yes
 WEBSITE_URL | Creates a link button for the status embed | No
 RESTART_TIMES | Will display restart times for the server | Yes
-    
+SHOW_PLAYERS | Choose to either show or hide the online player list | Yes
+
 ## Example of the `config.json` file
 ```json    
 {
@@ -108,7 +109,8 @@ RESTART_TIMES | Will display restart times for the server | Yes
     "LOG_CHANNEL": "617873550648279051",
     "DEBUG": false,
     "WEBSITE_URL": "https://godsnetwork.live", 
-    "RESTART_TIMES": "12am, 1pm, 3pm"
+    "RESTART_TIMES": "12am, 1pm, 3pm",
+    "SHOW_PLAYERS": true
   } 
 ```
 ## List of permissions for the `PERMISSION` variable in the `config.json` file
