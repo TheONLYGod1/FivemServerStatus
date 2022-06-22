@@ -58,8 +58,8 @@ A custom discord bot providing functionality for interacting with FiveM & Discor
    /// FiveM Queue Script installed on your server.  ///
    /////////////////////////////////////////////////////
    /// If the bot isn't able to check your server    ///
-   /// make sure you don't have player endpoints set ///
-   /// to false in your server.cfg.                  ///
+   /// make sure you don't have player endpoints     ///
+   /// set to be hidden in your server.cfg.          ///
    /// "Hide player endpoints in external log output"///
    /////////////////////////////////////////////////////
 ```
