@@ -1,11 +1,5 @@
-## NOTICE: This is a BETA version!! This may not function properly or cause issues, please do no report errors with this branch!
+## NOTICE: There have been some MAJOR CHANGES please review this readme and check the commits to see what has changed!
 
-## Updates:
-- New config values!
-- Removed LOG_LEVEL config values
-- Better console logging + color outputs
-- Status embed now has a button + website button config located in config.json
-- Check the commit for more changes!
 ### FiveM Server Status
 [![](https://img.shields.io/github/forks/TheONLYGod1/FivemServerStatus?label=Fork&style=social)](https://github.com/TheONLYGod1/FivemServerStatus/fork)
 [![](https://img.shields.io/badge/discord.js-v13.8.0-brightgreen)](https://github.com/TheONLYGod1/FivemServerStatus/)
