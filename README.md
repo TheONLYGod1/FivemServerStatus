@@ -2,7 +2,7 @@
 
 ### FiveM Server Status
 [![](https://img.shields.io/github/forks/TheONLYGod1/FivemServerStatus?label=Fork&style=social)](https://github.com/TheONLYGod1/FivemServerStatus/fork)
-[![](https://img.shields.io/badge/discord.js-v13.8.0-brightgreen)](https://github.com/TheONLYGod1/FivemServerStatus/)
+[![](https://img.shields.io/badge/discord.js-v13.8.1-brightgreen)](https://github.com/TheONLYGod1/FivemServerStatus/)
 [![](https://img.shields.io/node/v/bot)](https://github.com/TheONLYGod1/FivemServerStatus/)
 [![](https://img.shields.io/maintenance/yes/2022)](https://github.com/TheONLYGod1/FivemServerStatus/)
 [![](https://img.shields.io/github/issues/TheONLYGod1/FivemServerStatus)](https://github.com/TheONLYGod1/FivemServerStatus/)
