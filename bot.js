@@ -394,11 +394,12 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
       }
     }
   });
-
-  bot.login(BOT_TOKEN).then(null).catch(() => {
-    console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red('The token you provided is invalided. Please make sure you are using the correct one from https://discord.com/developers/applications!')}`)
-    process.exit(1);
-  });
-
+try {
+  bot.login(BOT_TOKEN)
   return bot;
+} catch(error) {
+    console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red('The token you provided is invalided. Please make sure you are using the correct one from https://discord.com/developers/applications!')}`);
+    console.log(`${chalk.bGRed(`[ERROR]`)} ${chalk.red(error)}`);
+    process.exit(1);
+    return bot;
 }
