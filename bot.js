@@ -403,3 +403,4 @@ try {
     process.exit(1);
     return bot;
 }
+}
