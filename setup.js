@@ -51,8 +51,8 @@ const TEMPLATE = {
     'message': 'Disable/Enable debug logs (spammy)',
     'required': true
   },
-  'WEBSITE': {
-    'message': 'Creates a link button for the status embed',
+  'WEBSITE_URL': {
+    'message': 'Creates a link button for the status embed. Make sure you are using https://[website] or http://[website]',
     'required': false
   },
   'SHOW_PLAYERS': {
