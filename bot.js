@@ -401,6 +401,5 @@ try {
     console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red('The token you provided is invalided. Please make sure you are using the correct one from https://discord.com/developers/applications!')}`);
     console.log(`${chalk.bGRed(`[ERROR]`)} ${chalk.red(error)}`);
     process.exit(1);
-    return bot;
 }
 }
