@@ -12,6 +12,12 @@
 
 A custom discord bot providing functionality for interacting with FiveM & Discord servers.
 - Updated & Edited by [TheONLYGod1](https://github.com/TheONLYGod1)
+## Notice:
+- If you recieve an error in console saying "`Error [DISALLOWED_INTENTS]: Privileged intent provided is not enabled or whitelisted....`"
+    - Enable the intents shown in the image below found where you get your bot token..
+    - ![intents](https://cdn.discordapp.com/attachments/779184628913274881/1003042560433979462/unknown.png)
+
+
 ## Need Help?
 <kbd> [![](https://discordapp.com/api/guilds/617870704662020136/widget.png?style=banner2)](https://discord.gg/pAKE2YK)
 ## Notices:

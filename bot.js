@@ -228,13 +228,16 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
    /////////////////////////////////////////////////////
    ➼ Bot has been started and will attempt to connect to the server...`)}
     `)
+    setInterval(() => {
+      getPlayers().then((players) => {
     bot.user.setPresence({
       activities: [{
-          name: `${SERVER_NAME}`,
+          name: `${players.length}/${MAX_PLAYERS}`,
           type: "WATCHING"
       }], status: "online"
     })
-  
+  })
+  }, 15000);
     setInterval(updateMessage, UPDATE_TIME);
   });
 
