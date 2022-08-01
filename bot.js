@@ -135,10 +135,14 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
     .setThumbnail(SERVER_LOGO)
     .setFooter({ text: TICK_N % 2 === 0 ? `${SERVER_NAME}` : `${SERVER_NAME}` })
     .setTimestamp(new Date())
-    .addField('\n\u200b\nServer Name', `\`\`\`${SERVER_NAME}\`\`\``,false)
+    .addFields(
+        { name: '\n\u200b\nServer Name',  value: `\`\`\`${SERVER_NAME}\`\`\``, inline: false} 
+    )
     if (STATUS !== undefined)
     {
-      embed.addField('📬 Server Notice:',`\`\`\`${STATUS}\`\`\`\n\u200b\n`);
+      embed.addFields(
+        { name: '📬 Server Notice:',   value: `\`\`\`${STATUS}\`\`\`\n\u200b\n`, inline: false }
+      );
       embed.setColor('#00f931')
     }
     return embed;
