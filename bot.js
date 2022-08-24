@@ -124,7 +124,8 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
   if(!checkMe.includes(PERMISSION)) {
 
   console.log(`${chalk.bgRed("[ERROR]")} ${chalk.red(`⚠ NOTICE: Your 'PERMISSION' variable (${chalk.underline.yellow(PERMISSION)}) is incorrect please, check the readme to find the list of permissions... exiting....`)}`);
-  process.exit(0);             
+  // process.exit(0);
+ // testing issues with console closing reported by Mdog#0001             
   }
 
 })
@@ -407,6 +408,7 @@ try {
 } catch(error) {
     console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red('The token you provided is invalided. Please make sure you are using the correct one from https://discord.com/developers/applications!')}`);
     console.log(`${chalk.bGRed(`[ERROR]`)} ${chalk.red(error)}`);
-    process.exit(1);
+    //process.exit(1);
+  // testing issues with console closing reported by Mdog#0001
 }
 }
