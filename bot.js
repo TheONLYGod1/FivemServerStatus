@@ -55,14 +55,14 @@ exports.start = function(SETUP) {
           if(DEBUG != false) {
           console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get player info...\nError: ${e.stack}`)}`)
         } else {
-          return offline;
+          offline();
         }
             });
       }).catch((e) => { 
         if(DEBUG != false) {
           console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get player info...\nError: ${e.stack}`)}`)
         } else {
-          return offline;
+          offline();
         }
         });
     })
@@ -77,14 +77,14 @@ exports.start = function(SETUP) {
           if(DEBUG != false) {
       console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get server info...\nError: ${e.stack}`)}`)
           } else {
-            return;
+            offline();
           }
         });
       }).catch((e) => {
         if(DEBUG != false) {
           console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get server info...\nError: ${e.stack}`)}`)
               } else {
-                return;
+                offline();
               }
         });
     });
