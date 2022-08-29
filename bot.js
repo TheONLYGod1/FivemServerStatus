@@ -51,8 +51,12 @@ exports.start = function(SETUP) {
       fetchTimeout(URL_PLAYERS, FETCH_TIMEOUT).then((res) => {
         res.json().then((players) => {
           resolve(players);
-        }).catch(reject);
-      }).catch(reject);
+        }).catch((e) => 
+      console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get player info...\nError: ${e.stack}`)}`)
+        });
+      }).catch((e) => 
+      console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get player info...\nError: ${e.stack}`)}`)
+        });
     })
   };
 
@@ -61,8 +65,12 @@ exports.start = function(SETUP) {
       fetchTimeout(URL_INFO, FETCH_OPS, FETCH_TIMEOUT).then((res) => {
         res.json().then((info) => {
           resolve(info.vars);
-        }).catch(reject);
-      }).catch(reject);
+        }).catch((e) => 
+      console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get server info...\nError: ${e.stack}`)}`)
+        });
+      }).catch((e) => 
+      console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get server info...\nError: ${e.stack}`)}`)
+        });
     });
   };
 
@@ -124,8 +132,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
   if(!checkMe.includes(PERMISSION)) {
 
   console.log(`${chalk.bgRed("[ERROR]")} ${chalk.red(`⚠ NOTICE: Your 'PERMISSION' variable (${chalk.underline.yellow(PERMISSION)}) is incorrect please, check the readme to find the list of permissions... exiting....`)}`);
-  // process.exit(0);
- // testing issues with console closing reported by Mdog#0001             
+ process.exit(0);          
   }
 
 })
@@ -408,7 +415,7 @@ try {
 } catch(error) {
     console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red('The token you provided is invalided. Please make sure you are using the correct one from https://discord.com/developers/applications!')}`);
     console.log(`${chalk.bGRed(`[ERROR]`)} ${chalk.red(error)}`);
-    //process.exit(1);
-  // testing issues with console closing reported by Mdog#0001
+   process.exit(1);
+  
 }
 }
