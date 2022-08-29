@@ -52,10 +52,18 @@ exports.start = function(SETUP) {
         res.json().then((players) => {
           resolve(players);
         }).catch((e) => { 
+          if(DEBUG === true) {
           console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get player info...\nError: ${e.stack}`)}`)
+        } else {
+          return;
+        }
             });
       }).catch((e) => { 
-      console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get player info...\nError: ${e.stack}`)}`)
+        if(DEBUG === true) {
+          console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get player info...\nError: ${e.stack}`)}`)
+        } else {
+          return;
+        }
         });
     })
   };
@@ -66,10 +74,18 @@ exports.start = function(SETUP) {
         res.json().then((info) => {
           resolve(info.vars);
         }).catch((e) => {
+          if(DEBUG === true) {
       console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get server info...\nError: ${e.stack}`)}`)
+          } else {
+            return;
+          }
         });
       }).catch((e) => {
-      console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get server info...\nError: ${e.stack}`)}`)
+        if(DEBUG === true) {
+          console.log(`${chalk.bgRed(`[ERROR]`)} ${chalk.red(`❌ node-fetch was unable to get server info...\nError: ${e.stack}`)}`)
+              } else {
+                return;
+              }
         });
     });
   };
