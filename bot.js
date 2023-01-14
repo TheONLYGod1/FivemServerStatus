@@ -28,6 +28,10 @@ exports.start = function(SETUP) {
   const URL_PLAYERS = new URL('/players.json', SETUP.URL_SERVER).toString();
   const URL_INFO = new URL('/info.json', SETUP.URL_SERVER).toString();
   /////////////////////////////////////////////////////
+  const SERVER_OFFLINE_ERROR = `Server offline ${URL_SERVER} (${URL_PLAYERS} ${URL_INFO})
+  \nPlease check that you do not have a firewall blocking connections to the port of the server.
+  \nPlease also ensure you can access ${URL_SERVER} in a web browser, if you cannot please ensure nothing is blocking that port from being accessed like a firewall.`
+  /////////////////////////////////////////////////////
   const MAX_PLAYERS = 64;
   const TICK_MAX = 1 << 9;
   const FETCH_TIMEOUT = 2000;
@@ -174,7 +178,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
 
   const offline = function() {
     console.log(`${chalk.bgBlue(`[INFO]`)} ${chalk.blue(Array.from(arguments))}`)
-    if (LAST_COUNT !== null) console.log(`${chalk.bgBlue(`[Info]`)} ${chalk.blue(`Server offline ${URL_SERVER} (${URL_PLAYERS} ${URL_INFO})`)}`);
+    if (LAST_COUNT !== null) console.log(`${chalk.bgBlue(`[Info]`)} ${chalk.blue(`${SERVER_OFFLINE_ERROR}`)}`);
     let embed = UpdateEmbed()
     .setColor(0xff0000)
     .setThumbnail(SERVER_LOGO)
@@ -260,7 +264,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
       getPlayers().then((players) => {
     bot.user.setPresence({
       activities: [{
-          name: `${players.length}/${MAX_PLAYERS}`,
+          name: `${SERVER_NAME}`,
           type: "WATCHING"
       }], status: "online"
     })
@@ -389,12 +393,20 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
           }
         } 
         if (message.channel.id === SUGGESTION_CHANNEL) {
+          let suggestionMap = message.attachments;
+          
           let embed = new Discord.MessageEmbed()
           .setAuthor({ name: message.member.nickname ? message.member.nickname : message.author.tag, iconURL: message.author.displayAvatarURL() })
           .setColor(0x2894C2)
           .setTitle('Suggestion')
           .setDescription(message.content)
           .setTimestamp(new Date());
+          if(message.attachments.size != 0) {
+            for (let [key, value] of suggestionMap) {  
+                if(!value.contentType.includes("image")) return;
+                embed.setImage(value.proxyURL)
+              }
+            }
           message.channel.send({ embeds: [embed] }).then((message) => {
             const sent = message;
             sent.react('👍').then(() => {
@@ -406,6 +418,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
           return message.delete();
         }
         if (message.channel.id === BUG_CHANNEL) {
+          let bugMap = message.attachments;
           let embedUser = new Discord.MessageEmbed()
           .setAuthor({ name: message.member.nickname ? message.member.nickname : message.author.tag, iconURL: message.author.displayAvatarURL() })
           .setColor(0x2894C2)
@@ -418,6 +431,12 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
           .setTitle('Bug Report')
           .setDescription(message.content)
           .setTimestamp(new Date());
+          if(message.attachments.size != 0) {
+            for (let [key, value] of bugMap) {  
+                if(!value.contentType.includes("image")) return;
+                embedStaff.setImage(value.proxyURL)
+              }
+            }
           message.channel.send({ embeds: [embedUser] }).then(null).catch(console.error);
           bot.channels.cache.get(BUG_LOG_CHANNEL).send({ embeds: [embedStaff] }).then(null).catch(console.error);
           return message.delete();
