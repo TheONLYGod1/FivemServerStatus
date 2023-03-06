@@ -168,7 +168,7 @@ Command | Description
 ## Credits
 Name | URLS | Other
 ------------ | ------------- | -------------
-Sky | https://github.com/TheONLYGod1 \| https://godsnetwork.live | [God's Groove](https://top.gg/bot/515645834684006400)
+Sky | https://github.com/TheONLYGod1 \| https://cloudless.space/ | [God's Groove](https://top.gg/bot/515645834684006400)
 Roque | https://github.com/RoqueDEV | 
 Douile | https://github.com/Douile | 
 Drazero | https://github.com/draZer0 | 
