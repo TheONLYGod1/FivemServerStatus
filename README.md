@@ -1,4 +1,4 @@
-## NOTICE: There have been some MAJOR CHANGES please review this readme and check the commits to see what has changed!
+## Basic documentation is located here [https://fivem.cloudless.space/](https://fivem.cloudless.space/)
 
 ### FiveM Server Status
 [![](https://img.shields.io/github/forks/TheONLYGod1/FivemServerStatus?label=Fork&style=social)](https://github.com/TheONLYGod1/FivemServerStatus/fork)
