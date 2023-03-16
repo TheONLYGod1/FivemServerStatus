@@ -203,7 +203,7 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
           { name: "Server Restart Times:",    value: `\`\`\`${RESTART_TIMES}\`\`\``,                                                                        inline: true }
           )
         .setThumbnail(SERVER_LOGO)
-        if (players.length > 0 && SHOW_PLAYERS == true) {
+        if (players.length > 0 && SHOW_PLAYERS == true && players.length < 4080) {
           let playersOnline = [];
           for (var i=0; i < players.length; i++) {
             playersOnline.push(`**${players[i].name.substr(0,12)}** - \`${players[i].ping}ms\``) // first 12 characters of players name
