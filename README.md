@@ -1,8 +1,6 @@
 ## Need Hosting for this bot?
 > You can use code `Cloudless` to save **20%** on your first order!!! Website: https://impulsehosting.net/. 
 
-# Go get yourself some hosting!!
-
 ### FiveM Server Status
 [![](https://img.shields.io/github/forks/TheONLYGod1/FivemServerStatus?label=Fork&style=social)](https://github.com/TheONLYGod1/FivemServerStatus/fork)
 [![](https://img.shields.io/badge/discord.js-v13.12.0-brightgreen)](https://github.com/TheONLYGod1/FivemServerStatus/)
