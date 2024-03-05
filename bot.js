@@ -17,7 +17,8 @@ exports.start = function(SETUP) {
   const PERMISSION = SETUP.PERMISSION;
   const DEBUG = SETUP.DEBUG;
   const SHOW_PLAYERS = SETUP.SHOW_PLAYERS;
-  const WEBSITE_URL = SETUP.WEBSITE_URL;
+  const BUTTON_WEBSITE_URL = SETUP.BUTTON_WEBSITE_URL;
+  const BUTTON_TEXT = SETUP.BUTTON_TEXT;
   const BOT_TOKEN = SETUP.BOT_TOKEN;
   const CHANNEL_ID = SETUP.CHANNEL_ID;
   const MESSAGE_ID = SETUP.MESSAGE_ID;
@@ -211,12 +212,12 @@ var checkMe = ['ADMINISTRATOR','CREATE_INSTANT_INVITE','KICK_MEMBERS','BAN_MEMBE
             embed.setDescription(`__**Online Players**__:\n${playersOnline.toString().replace(/\,\)/g,', ')}`)
             playersOnline = [];
         }
-        if(WEBSITE_URL.startsWith("https://") || WEBSITE_URL.startsWith("http://")) {
+        if(BUTTON_WEBSITE_URL.startsWith("https://") || BUTTON_WEBSITE_URL.startsWith("http://")) {
           const row = new MessageActionRow()
             .addComponents(
               new MessageButton()
-                .setLabel('Website')
-                .setURL(WEBSITE_URL)
+                .setLabel(BUTTON_TEXT || "Website")
+                .setURL(BUTTON_WEBSITE_URL)
                 .setStyle('LINK')
             );
           sendOrUpdate(embed, row);
