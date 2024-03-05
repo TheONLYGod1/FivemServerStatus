@@ -86,7 +86,8 @@ BUG_CHANNEL | Channel that will recieve bug reports | Yes
 BUG_LOG_CHANNEL | Channel that will log bug reports | Yes
 LOG_CHANNEL | Channel that will log status changes | Yes
 DEBUG | Shows debug logs (spammy in console) | Yes
-WEBSITE_URL | Creates a link button for the status embed | No
+BUTTON_WEBSITE_URL | Creates a link button for the status embed | No
+BUTTON_TEXT | Default will be "Website" for the button, or add a value in the config for custom wordage | No
 RESTART_TIMES | Will display restart times for the server | Yes
 SHOW_PLAYERS | Choose to either show or hide the online player list | Yes
 
@@ -106,7 +107,8 @@ SHOW_PLAYERS | Choose to either show or hide the online player list | Yes
     "BUG_LOG_CHANNEL": "657070256925442058",
     "LOG_CHANNEL": "617873550648279051",
     "DEBUG": false,
-    "WEBSITE_URL": "https://godsnetwork.live", 
+    "BUTTON_WEBSITE_URL": "https://cloudless.space",
+    "BUTTON_TEXT": "Our Website!",
     "RESTART_TIMES": "12am, 1pm, 3pm",
     "SHOW_PLAYERS": true
   } 
