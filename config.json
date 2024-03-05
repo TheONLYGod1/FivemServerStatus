@@ -12,7 +12,8 @@
     "BUG_LOG_CHANNEL": "",
     "LOG_CHANNEL": "",
     "DEBUG": false,
-    "WEBSITE_URL": "",
+    "BUTTON_WEBSITE_URL": "",
+    "BUTTON_TEXT": "" 
     "RESTART_TIMES": "",
     "SHOW_PLAYERS": true
   }
